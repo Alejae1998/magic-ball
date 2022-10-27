@@ -1,7 +1,9 @@
 /* Imports */
 const submitBtn = document.getElementById('submit');
+const resetBtn = document.getAnimations('reset');
 const promptSection = document.getElementById('prompt');
 const fortuneSection = document.getElementById('fortune');
+const answerP = document.getElementById('answer');
 /* Get DOM Elements */
 
 /* State */
@@ -32,6 +34,16 @@ submitBtn.addEventListener('click', () => {
     //add the hide class to prompt
     promptSection.classList.toggle('hide');
     //remove the hide class from fortune
+    fortuneSection.classList.toggle('hide');
+    //generate a random number between 0 and the length
+    const randInt = Math.floor(Math.random() * answers.length);
+    const randomChoice = answers[randInt];
+
+    answerP.textContent = randomChoice;
+});
+
+resetBtn.addEventListener('click', () => {
+    promptSection.classList.toggle('hide');
     fortuneSection.classList.toggle('hide');
 });
 /* Display Functions */
