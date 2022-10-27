@@ -1,6 +1,6 @@
 /* Imports */
 const submitBtn = document.getElementById('submit');
-const resetBtn = document.getAnimations('reset');
+const resetBtn = document.getElementById('reset');
 const promptSection = document.getElementById('prompt');
 const fortuneSection = document.getElementById('fortune');
 const answerP = document.getElementById('answer');
@@ -44,6 +44,8 @@ submitBtn.addEventListener('click', () => {
 
     answerP.textContent = randomChoice;
 });
+
+resetBtn.addEventListener('click', toggleSections);
 
 /* Display Functions */
 
