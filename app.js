@@ -29,12 +29,15 @@ const answers = [
     'Very doubtful',
 ];
 /* Events */
+
+function toggleSections() {
+    promptSection.classList.toggle('hide');
+    fortuneSection.classList.toggle('hide');
+}
 submitBtn.addEventListener('click', () => {
     console.log('clicking submit');
+    toggleSections();
     //add the hide class to prompt
-    promptSection.classList.toggle('hide');
-    //remove the hide class from fortune
-    fortuneSection.classList.toggle('hide');
     //generate a random number between 0 and the length
     const randInt = Math.floor(Math.random() * answers.length);
     const randomChoice = answers[randInt];
