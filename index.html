@@ -25,17 +25,17 @@
     <body>
         <header>
             <img class="logo" src="assets/html_css_js.png" alt="logo" />
-            <h1>Web App</h1>
+            <h1>Magic 8 Ball</h1>
         </header>
 
         <main>
-            <section id="prompt" class="propmt">
+            <section id="prompt" class="center">
                 <p>What do you want to know?</p>
                 <input type="text" placeholder="ask me something" />
-                <button id="submit">Let's see</button>
+                <button id="submit" onclick="shake()">Shake</button>
             </section>
             <section id="fortune" class="fortune-hide">
-                <img src="./assets/magic-ball-2.jpeg" alt="magic-8-ball" />
+                <img id="ball" src="./assets/magic-8-ball-3.png" alt="magic-8-ball" />
                 <p id="answer"></p>
                 <button id="reset">Ask me again!</button>
             </section>

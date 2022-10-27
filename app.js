@@ -35,7 +35,7 @@ function toggleSections() {
     fortuneSection.classList.toggle('hide');
 }
 submitBtn.addEventListener('click', () => {
-    console.log('clicking submit');
+    //console.log('clicking submit');
     toggleSections();
     //add the hide class to prompt
     //generate a random number between 0 and the length
@@ -45,10 +45,6 @@ submitBtn.addEventListener('click', () => {
     answerP.textContent = randomChoice;
 });
 
-resetBtn.addEventListener('click', () => {
-    promptSection.classList.toggle('hide');
-    fortuneSection.classList.toggle('hide');
-});
 /* Display Functions */
 
 // (don't forget to call any display functions you want to run on page load!)
